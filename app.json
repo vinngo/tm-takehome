@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vincentngoo.tm_takehome"
     },
     "android": {
       "adaptiveIcon": {
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1ea0f038-6d95-49fc-8a3a-e3a8e63e4e1f"
+      }
     }
   }
 }

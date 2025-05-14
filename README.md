@@ -1,50 +1,77 @@
-# Welcome to your Expo app 👋
+# Stack-Based Navigation Example
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+This project demonstrates a modern mobile app with stack-based navigation using Expo Router. The app starts with a landing page that prompts users to sign in, and then navigates to the main application screens after authentication.
 
-## Get started
+## Navigation Structure
+The navigation is organized into distinct groups:
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+App Root
+├── / (Landing Page)
+├── /(auth)
+│   └── sign-in
+└── /(app)
+    ├── / (Home)
+    └── profile
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Key Features
+- Stack-based navigation with proper animations
+- Authentication flow with sign-in screen
+- Clean transition between auth and main app contexts
+- Animated components for better user experience
+- Dark and light mode support
 
-## Learn more
+## Getting Started
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Install dependencies:
+```
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. Start the development server:
+```
+npm start
+```
 
-## Join the community
+3. Run on a simulator or device:
+```
+npm run ios
+```
+or
+```
+npm run android
+```
 
-Join our community of developers creating universal apps.
+## Implementation Details
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Navigation
+The navigation is implemented using Expo Router, which provides a file-based routing system. The app is organized into three main navigation contexts:
+
+- Root (landing page)
+- Auth screens
+- Main app screens
+
+### Authentication
+The authentication is currently mocked with a simple sign-in screen. In a real app, you would integrate with an authentication provider like Firebase Auth, Auth0, or your own backend.
+
+### UI Components
+The UI components use React Native's built-in components along with Expo libraries for additional functionality, such as:
+- Animated transitions with react-native-reanimated
+- Icons with Expo Symbols
+- BlurView for visual effects
+
+### Styling
+The app uses a consistent styling approach with:
+- Color scheme support for dark and light modes
+- Reusable style patterns
+- Responsive layouts
+
+## Extending the App
+To extend this application, you can:
+
+1. Add more screens to the /(app) directory
+2. Implement real authentication using Auth0, Firebase, or another provider
+3. Add state management with Redux, Zustand, or Context API
+4. Enhance the UI with additional animations and transitions
